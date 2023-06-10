@@ -70,7 +70,8 @@ public class LoadBalancer implements ILoadBalancer{
 
     /**
      * @param clientToRemove
-     * remove clientToRemove from LoadBalancer
+     * remove clientToRemove from LoadBalancer.
+     * Assumption - remove client will happen rarely. This is why the time complexity is O(n).
      */
     @Override
     public void removeClient(IClient clientToRemove) {
